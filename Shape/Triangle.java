@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Triangle {
-    private Point A = new Point();
+    private Point A;
     private Point B;
     private Point C;
     //equilateral, isosceles, rectangular, arbitrary
@@ -91,7 +91,6 @@ public class Triangle {
 
         return square;
     }
-
     public static double getPerimetr(Triangle triangle) {
         double ab = Math.sqrt(Math.pow((triangle.getB().getX() - triangle.getA().getX()), 2) +
                 Math.pow((triangle.getB().getY() - triangle.getA().getY()), 2));
@@ -113,7 +112,6 @@ public class Triangle {
         }
         return equilateral;
     }
-
     //колличество равнобедренных
     public static int getQuantityIsosceles(List<Triangle> triangles) {
         int isosceles = 0;
@@ -124,7 +122,6 @@ public class Triangle {
         }
         return isosceles;
     }
-
     //колличество прямоугольных
     public static int getQuantityRectangular(List<Triangle> triangles) {
         int rectangular = 0;
@@ -135,7 +132,6 @@ public class Triangle {
         }
         return rectangular;
     }
-
     //колличество произвольных
     public static int intgetQuantityArbitrary(List<Triangle> triangles) {
         int arbitrary = 0;
@@ -146,7 +142,6 @@ public class Triangle {
         }
         return arbitrary;
     }
-
     //выборка равносторонних треугольников
     public static List<Triangle> findEquilateral(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
@@ -157,7 +152,6 @@ public class Triangle {
         }
         return results;
     }
-
     //выборка равнобедренных треугольников
     public static List<Triangle> findIsosceles(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
@@ -168,7 +162,6 @@ public class Triangle {
         }
         return results;
     }
-
     //выборка прямоугольных треугольников
     public static List<Triangle> findRectangular(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
@@ -179,7 +172,6 @@ public class Triangle {
         }
         return results;
     }
-
     //выборка произвольных треугольников
     public static List<Triangle> findArbitrary(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
@@ -190,7 +182,6 @@ public class Triangle {
         }
         return results;
     }
-
     //выборка наибольшего по площади треугольника
     public static List<Triangle> findTrianglWithMaxSquare(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
@@ -208,11 +199,10 @@ public class Triangle {
         }
         return results;
     }
-
     //выборка наименьшего по площади треугольника
     public static List<Triangle> findTriangWithMinSquare(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
-        double min = 2000000.0;
+        double min = 1000000.0;
         for (int i = 0; i < triangles.size(); i++) {
             if (getSquare(triangles.get(i)) < min){
                 min = getSquare(triangles.get(i));
