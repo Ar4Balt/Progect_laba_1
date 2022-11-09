@@ -13,22 +13,13 @@ public class Point {
         this.X = number_x;
         this.Y = number_y;
     }
-    public Point(double number_x) {
-        this.X = number_x;
-    }
-    public Point(double number_for_x_or_y, boolean event) {
-        if (event != true) {
-            this.X = number_for_x_or_y;
-        } else {
-            this.Y = number_for_x_or_y;
-        }
-
-    }
     public Point(Point point){
         this.X = point.X;
         this.Y = point.Y;
     }
     public Point() {
+        this.X = 0.0;
+        this.Y = 0.0;
     }
 
     public double getX() {
