@@ -7,7 +7,6 @@ import java.util.Objects;
 public class Point {
     private double X = 0.0;
     private double Y = 0.0;
-    private boolean XorY = false;
 
     public Point(double number_x, double number_y) {
         this.X = number_x;
