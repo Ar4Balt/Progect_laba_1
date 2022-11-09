@@ -49,7 +49,6 @@ public class Triangle {
     public String getTypeOfTriangle() {
         return TypeOfTriangle;
     }
-
     public void setTypeOfTriangle(String typeOfTriangle) {
         TypeOfTriangle = typeOfTriangle;
     }
@@ -84,6 +83,7 @@ public class Triangle {
                 "\n}";
     }
 
+    //площадь
     public static double getSquare(Triangle triangle) {
         double square = ((triangle.getA().getX() - triangle.getC().getX()) *
                 (triangle.getB().getY() - triangle.getC().getY()) - (triangle.getB().getX() - triangle.getC().getX()) *
@@ -91,6 +91,7 @@ public class Triangle {
 
         return square;
     }
+    //периметр
     public static double getPerimetr(Triangle triangle) {
         double ab = Math.sqrt(Math.pow((triangle.getB().getX() - triangle.getA().getX()), 2) +
                 Math.pow((triangle.getB().getY() - triangle.getA().getY()), 2));

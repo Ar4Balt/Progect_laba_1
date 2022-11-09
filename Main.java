@@ -1,13 +1,24 @@
 import Shape.Point;
 import Shape.Triangle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Point A = new Point(1.2, 4.6);
-        Triangle B = new Triangle(A,A,A);
+        Point A = new Point(1.2, 2.3);
+        Point B = new Point(18.7, 35.6);
+        Point C = new Point(0.0, 6.0);
 
         System.out.println(A);
         System.out.println(B);
+    }
+    public static List<Triangle> createTriangle(Point a, Point b, Point c){
+        List<Triangle> triangles = new ArrayList<>();
+        triangles.add(new Triangle());
+        triangles.add(new Triangle(a, b, c));
+        triangles.add(new Triangle(a, b, c, ""));
+        return triangles;
     }
 }
 
