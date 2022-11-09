@@ -37,13 +37,14 @@ public class Point {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Point)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
-        return Double.compare(point.getX(), getX()) == 0 && Double.compare(point.getY(), getY()) == 0 && XorY == point.XorY;
+        return Double.compare(point.X, X) == 0 && Double.compare(point.Y, Y) == 0;
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(getX(), getY(), XorY);
+        return Objects.hash(X, Y);
     }
 
     @Override
