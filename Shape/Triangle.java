@@ -9,7 +9,6 @@ public class Triangle {
     private Point A;
     private Point B;
     private Point C;
-    //equilateral, isosceles, rectangular, arbitrary
     private String TypeOfTriangle = "";
 
     public Triangle(Point a, Point b, Point c, String typeOfTriangle) {
@@ -51,10 +50,9 @@ public class Triangle {
     public String getTypeOfTriangle() {
         return TypeOfTriangle;
     }
-    public void setTypeOfTriangle(String typeOfTriangle) {
-        TypeOfTriangle = typeOfTriangle;
-    }
-    public void setTypeOfTriangle() {
+    public void setTypeOfTriangle(String TypeOfTriangle){
+        this.TypeOfTriangle = TypeOfTriangle;
+    }    public void setTypeOfTriangle() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Choice triangles: equilateral, isosceles, rectangular and arbitrary (1/2/3/0): ");
         int event = scanner.nextInt();
