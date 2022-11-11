@@ -133,7 +133,7 @@ public class Utility {
     //выборка наименьшего по площади треугольника
     public static List<Triangle> findTriangWithMinSquare(List<Triangle> triangles){
         List<Triangle> results = new ArrayList<>();
-        double min = 2000000.0;
+        double min = 1000000.0;
         for (int i = 0; i < triangles.size(); i++) {
             if (getSquare(triangles.get(i)) < min){
                 min = getSquare(triangles.get(i));
